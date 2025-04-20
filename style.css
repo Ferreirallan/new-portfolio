@@ -118,4 +118,29 @@ a:hover{
 }
 
 .menu-links.open{
+    max-height: 300px;
+}
+
+.hamburguer-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburguer-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguer-icon.open span:last-child{
+    transform: rotate(-45deg)  translate(10px, -5px);
+}
+
+.hamburguer-icon span:first-child{
+    transform: none;
+}
+
+.hamburguer-icon span:first-child{
+    opacity: 1;
+}
+
+.hamburguer-icon span:first-child{
+    transform: none;
 }
