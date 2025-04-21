@@ -354,3 +354,39 @@ article{
 article .icon{
     cursor: default;
 }
+
+/* PROJECTS SECTION */
+
+#projects{
+    position: relative;
+}
+
+.color-container{
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+}
+
+.project-img{
+    border-radius: 12px;
+    width: 210%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.project-title{
+    margin: 1rem;
+    color: black;
+}
+
+.project-btn{
+    color: black;
+    border-color: rgb(163, 163, 163);
+}
+
+.section__projects2{
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+    padding-bottom: 10px;
+}
+
