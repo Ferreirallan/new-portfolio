@@ -6,14 +6,19 @@
 *{
     margin: 0;
     padding: 0;
+    
+   
 }
 
 body{
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    
 }
 
 html{
      scroll-behavior: smooth; /*comportamento de rolagem suave */
+     overflow-x: hidden;
 }
 
 p{
@@ -150,9 +155,10 @@ a:hover{
 section{
     padding-top: 4vh;
     height: 96vh;
-    margin: 0 10rem;
+    margin: 0 auto;
     box-sizing: border-box;
     min-height: fit-content;
+    padding: 0 2rem;
 }
 
 .section-container{
