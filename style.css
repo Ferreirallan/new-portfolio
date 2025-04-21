@@ -290,7 +290,7 @@ section{
 .arrow{
     position: absolute;
     right: -5rem;
-    bottom: 10rem;
+    bottom: 3rem;
 }
 
 .details-container{
@@ -303,8 +303,13 @@ section{
     text-align: center;
 }
 
+.section-container{
+    gap: 4rem;
+    height: 80%;
+}
+
 .section_pic-container{
     height: 400px;
-    width: 400;
+    width: 400px;
     margin: auto 0;
 }
