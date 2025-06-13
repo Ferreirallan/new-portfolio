@@ -31,7 +31,6 @@ function setTheme () {
     } else {
         setDarkMode();
     }
-
 }
 
 function setDarkMode() {
