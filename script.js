@@ -10,7 +10,7 @@ function toggleMenu() {
 const btn = document.getElementById("modeToggle");
 const btn2 = document.getElementById("modeToggle2");
 const themeIcons = document.querySelectorAll(".icon");
-const currentTheme = localStorage.getItem("t    heme");
+const currentTheme = localStorage.getItem("theme");
 
 if (currentTheme === "dark") {
     setDarkMode();
@@ -23,9 +23,31 @@ btn2.addEventListener("click", function() {
     setTheme();
 });
 
+function setTheme () {
+    let currentTheme = document.body.getAttribute("theme");
+
+    if (currentTheme = "dark"){
+        // some logic
+        setLightDarkMode();
+    } else {
+        setDarkMode();
+    }
+
+}
+
 function setDarkMode() {
-    // Some Logic
+    document.body.setAttribute("theme", "dark");
+    localStorage.setItem("theme", "dark");
+
+    themeIcons.forEach((icon) => {
+        icon.src = icon.getAttribute("src-dark");
+    })
 }
 function setLightDarkMode() {
-    // Some Logic
+    document.body.setAttribute("theme");
+    localStorage.setItem("theme", "light");
+    
+    themeIcons.forEach((icon) => {
+        icon.src = icon.getAttribute("src-light");
+    })
 }
