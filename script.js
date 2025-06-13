@@ -26,9 +26,9 @@ btn2.addEventListener("click", function() {
 function setTheme () {
     let currentTheme = document.body.getAttribute("theme");
 
-    if (currentTheme = "dark"){
+    if (currentTheme === "dark"){
         // some logic
-        setLightDarkMode();
+        setLightMode();
     } else {
         setDarkMode();
     }
@@ -41,7 +41,7 @@ function setDarkMode() {
 
     themeIcons.forEach((icon) => {
         icon.src = icon.getAttribute("src-dark");
-    })
+    });
 }
 function setLightDarkMode() {
     document.body.setAttribute("theme");
@@ -49,5 +49,5 @@ function setLightDarkMode() {
     
     themeIcons.forEach((icon) => {
         icon.src = icon.getAttribute("src-light");
-    })
+    });
 }
