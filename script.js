@@ -49,3 +49,4 @@ function setLightDarkMode() {
         icon.src = icon.getAttribute("src-light");
     });
 }
+
