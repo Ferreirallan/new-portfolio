@@ -494,4 +494,84 @@ footer{
 footer p{
     text-align: center;
 }
+/* Efeito de destaque nos cards de projetos */
+.details-container.color-container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
 
+.details-container.color-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-color: var(--secundary-color);
+}
+
+/* Ajuste para imagens de dashboards/gráficos */
+.project-img {
+    border-radius: 12px;
+    width: 100%; /* Corrigido de 210% para 100% para não quebrar o layout */
+    height: 200px;
+    object-fit: contain; /* Garante que o gráfico apareça inteiro sem cortes */
+    background-color: #f0f0f0;
+    margin-bottom: 1rem;
+}
+
+/* Badge de Tecnologia (Opcional: adicione no HTML dentro dos cards) */
+.tech-badge {
+    background-color: var(--primary-color-3);
+    color: var(--primary-color);
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+/* Container em Grid para manter 3 colunas perfeitas */
+.projects-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* Forçar todos os cards a terem a mesma altura */
+.details-container.color-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Garante que todos ocupem a mesma altura na linha */
+    justify-content: space-between;
+}
+
+/* Wrapper para as imagens ficarem todas do mesmo tamanho sem distorcer */
+.project-img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    background: #f0f0f0;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem sobrar fundo cinza */
+}
+
+/* Padronizar a altura do texto para não empurrar os botões */
+.project-description {
+    font-size: 0.9rem;
+    height: 80px; /* Altura fixa para o texto para alinhar os botões abaixo */
+    overflow: hidden;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+    min-height: 3.5rem; /* Alinha títulos de 1 ou 2 linhas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

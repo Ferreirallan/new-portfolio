@@ -59,9 +59,10 @@
             <img src="assetes/íconeallan.png" alt="Allan Porto profile picture">
         </div>
         <div class="section_text">
-            <p class="section__text__p1">Hello,  i'm</p>
-            <h1 class="title">Allan Porto</h1>
-            <p class="section__text__p2">Frontend Developer</p>
+            <div class="section_text">
+    <p class="section__text__p1">Hello, i'm</p>
+    <h1 class="title">Allan Porto</h1>
+    <p class="section__text__p2">Data Analyst | Data Science Enthusiast</p>
             <div class="btn-container">
                 <button class="btn btn-color2" onclick="window.open('./assetes/Currículo Allan P Ferreira.pdf')">Download CV</button>
                 <button class="btn btn-color1" onclick="location.href='./#contact'">Contact Info</button>
@@ -236,56 +237,49 @@
         alt="Arrow Icon" class="arrow icon" onclick="location.href='./#projects'">
     </section>
     <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="assetes/project analisys.png" alt="Project Analysis Dashboard" class="project-img">
-                </div>
-                <h2 class="experience-sub-title project title">Salary Analysis Dashboard</h2>
-                <p class="section__projects2">Development of an interactive dashboard (Data App) with Streamlit/Python to analyze and visualize data area salaries globally. Allows you to filter data by year, position, and type of work (in-person, remote, hybrid).</p>
-                <div class="btn-container">
-                    <button class="btn btn-color2 project-btn" onclick="window.open('https://github.com/Ferreirallan/Spotify', '_blank', 'noopener,noreferrer')">
-                        GitHub
-                    </button>
-                  <button class="btn btn-color2 project-btn" onclick="window.open('https://dados-phyton.streamlit.app', '_blank', 'noopener,noreferrer')">
-                           Live Demo
-                        </button>
-                </div>
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    
+    <div class="projects-grid-container">
+        
+        <div class="details-container color-container">
+            <div class="project-img-wrapper">
+                <img src="assetes/gráfico ansiedade.png" alt="Impacto Pandemia" class="project-img">
             </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="assetes/ProjectTesla.png" alt="Projetc Tesla" class="project-img">
-                </div>
-                <h2 class="experience-sub-title project title">Projetc Site Tesla</h2>
-                <p class="section__projects2">Interface inspired by Tesla models. The project consists of 6 pages.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color2 project-btn" onclick="window.open('https://github.com/Ferreirallan/SiteTesla', '_blank', 'noopener,noreferrer')">
-                        GitHub
-                    </button>
-                  <!--  <button class="btn btn-color2 project-btn" onclick="location.href='https://github.com/Ferreirallan/Spotify'">
-                        GitHub
-                    </button>-->
-                </div>
-                
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="assetes/projectpiano.png" alt="Projeto Piano" class="project-img">
-                    </div>
-                    <h2 class="experience-sub-title project title">Playable Piano</h2>
-                    <p class="section__projects2">I developed an interactive piano using web technologies (HTML, CSS and JavaScript). The project allows users to play different musical notes directly from the computer keyboard or by clicking on the virtual keys on the screen.</p>
-                    <div class="btn-container">
-                        <button class="btn btn-color2 project-btn" onclick="window.open('https://github.com/Ferreirallan/Piano', '_blank', 'noopener,noreferrer')">
-                            GitHub
-                        </button>
-                        <button class="btn btn-color2 project-btn" onclick="window.open('https://pianoplayable.netlify.app/', '_blank', 'noopener,noreferrer')">
-                           Live Demo
-                        </button>
-                    </div>
+            <h2 class="experience-sub-title project-title">Impacto da Pandemia na Saúde Mental</h2>
+            <p class="project-description">Dashboard no Power BI com 8 indicadores críticos. Analisa correlações de bem-estar utilizando DAX avançado e Star Schema.</p>
+            <div class="btn-container">
+                <button class="btn btn-color2" onclick="window.open('...')">Documentação</button>
+                <button class="btn btn-color2" onclick="window.open('...')">Live Demo</button>
+            </div>
         </div>
+
+        <div class="details-container color-container">
+            <div class="project-img-wrapper">
+                <img src="assetes/project analisys.png" alt="Salary Analysis" class="project-img">
+            </div>
+            <h2 class="experience-sub-title project-title">Salary Analysis Data App</h2>
+            <p class="project-description">Aplicação de análise exploratória com Python/Streamlit. Visualização de dados globais com filtros dinâmicos (Pandas/Plotly).</p>
+            <div class="btn-container">
+                <button class="btn btn-color2" onclick="window.open('...')">GitHub</button>
+                <button class="btn btn-color2" onclick="window.open('...')">Live Demo</button>
+            </div>
+        </div>
+
+        <div class="details-container color-container">
+            <div class="project-img-wrapper">
+                <img src="assetes/projectpiano.png" alt="Playable Piano" class="project-img">
+            </div>
+            <h2 class="experience-sub-title project-title">Playable Piano</h2>
+            <p class="project-description">Piano interativo desenvolvido com JS puro. Permite tocar notas musicais via teclado ou clique, focando em lógica de eventos.</p>
+            <div class="btn-container">
+                <button class="btn btn-color2" onclick="window.open('...')">GitHub</button>
+                <button class="btn btn-color2" onclick="window.open('...')">Live Demo</button>
+            </div>
+        </div>
+
+    </div>
+</section>
         <img src="assetes/arrow.png" alt="Arrow Icon" class="arrow icon" onclick="location.href='./#contact'">
     </section>
     <section id="contact">
@@ -320,4 +314,4 @@
     </footer>
     <script src="script.js"></script>
 </body>
-</html>
+</html>z

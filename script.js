@@ -50,3 +50,20 @@ function setLightDarkMode() {
     });
 }
 
+// Efeito Typing para o Cargo
+const textElement = document.querySelector(".section__text__p2");
+const text = "Data Analyst | Python Developer";
+let index = 0;
+
+function typeEffect() {
+    if (index < text.length) {
+        textElement.innerHTML = text.substring(0, index + 1);
+        index++;
+        setTimeout(typeEffect, 100);
+    }
+}
+
+// Inicia o efeito quando a página carrega
+window.onload = () => {
+    typeEffect();
+};
