@@ -240,53 +240,86 @@
     <p class="section__text__p1">Browse My Recent</p>
     <h1 class="title">Projects</h1>
     
+    <div class="filter-container" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem;">
+    <button class="btn btn-color1" onclick="filterProjects('all')">Todos</button>
+    <button class="btn btn-color2" onclick="filterProjects('Power BI')">Power BI</button>
+    <button class="btn btn-color2" onclick="filterProjects('Python & Streamlit')">Python</button>
+</div>
+
     <div class="projects-grid-container">
         
         <div class="details-container color-container">
             <div class="project-img-wrapper">
+                <span class="project-tag">Power BI</span>
                 <img src="assetes/Dashboards Pandemia.png" alt="Impacto Pandemia" class="project-img">
             </div>
             <h2 class="experience-sub-title project-title">Impacto da Pandemia na Saúde Mental</h2>
-            <p class="project-description">Dashboard desenvolvido em Power BI. O projeto consolida 8 gráficos, permitindo analisar correlações entre níveis de bem-estar e acesso a atendimento psicológico durante o período pandêmico.</p>
+            <div class="project-description-container">
+                <p class="project-description">Análise exploratória de 8 indicadores críticos, correlacionando níveis de bem-estar e acesso a tratamento psicológico.</p>
+            </div>
             <div class="btn-container">
                 <button class="btn btn-color2" onclick="window.open('https://github.com/Ferreirallan/saude-mental-powerbi-analysis')">GitHub</button>
-                <button class="btn btn-color2" onclick="window.open('https://app.powerbi.com/groups/me/reports/d80414f6-9cee-4a6d-8843-4ca83b29f181/86820080b051e1095c9f?experience=power-bi')">Live Demo</button>
+                <button class="btn btn-color2" onclick="window.open('URL_AQUI')">Live Demo</button>
             </div>
         </div>
 
         <div class="details-container color-container">
             <div class="project-img-wrapper">
+                <span class="project-tag">Python & Streamlit</span>
                 <img src="assetes/project analisys.png" alt="Salary Analysis" class="project-img">
             </div>
             <h2 class="experience-sub-title project-title">Salary Analysis Data App</h2>
-            <p class="project-description">Aplicação de análise exploratória com Python/Streamlit. Visualização de dados globais com filtros dinâmicos (Pandas/Plotly).</p>
+            <div class="project-description-container">
+                <p class="project-description">Data App para visualização de salários globais com filtros dinâmicos utilizando Pandas e Plotly.</p>
+            </div>
             <div class="btn-container">
-                <button class="btn btn-color2" onclick="window.open('https://github.com/Ferreirallan/Python-Dev-Streamlit', '_blank', 'noopener,noreferrer')">GitHub</button>
-                <button class="btn btn-color2" onclick="window.open('https://dados-phyton.streamlit.app', '_blank', 'noopener,noreferrer')">Live Demo</button>
+                <button class="btn btn-color2" onclick="window.open('https://github.com/Ferreirallan/Python-Dev-Streamlit')">GitHub</button>
+                <button class="btn btn-color2" onclick="window.open('https://dados-phyton.streamlit.app')">Live Demo</button>
             </div>
         </div>
 
         <div class="details-container color-container">
             <div class="project-img-wrapper">
+                <span class="project-tag">Power BI</span>
                 <img src="assetes/Dashboard de Vendas.png" alt="Dashboard de Vendas" class="project-img">
             </div>
             <h2 class="experience-sub-title project-title">Dashboard de Vendas</h2>
-            <p class="project-description">Dashboard desenvolvido em Power BI para análise de faturamento global ($64M+). Consolida KPIs de vendas, performance por marca e ranking regional, permitindo a identificação de tendências sazonais.</p>
+            <div class="project-description-container">
+                <p class="project-description">Análise de faturamento ($64M+) e performance regional para identificação de tendências sazonais.</p>
+            </div>
             <div class="btn-container">
-                <button class="btn btn-color2" onclick="window.open('https://github.com/Ferreirallan/Dashboard-de-Vendas', '_blank', 'noopener,noreferrer')">GitHub</button>
-                <button class="btn btn-color2" onclick="window.open('https://app.powerbi.com/groups/me/reports/2d995414-a626-422a-b03f-871f9c1f25ec/423252e766383c0429ce?experience=power-bi', '_blank', 'noopener,noreferrer')">Live Demo</button>
+                <button class="btn btn-color2" onclick="window.open('https://github.com/Ferreirallan/Dashboard-de-Vendas')">GitHub</button>
+                <button class="btn btn-color2" onclick="window.open('URL_AQUI')">Live Demo</button>
             </div>
         </div>
 
         <div class="details-container color-container">
             <div class="project-img-wrapper">
+                <span class="project-tag">Power BI</span>
                 <img src="assetes/Dashboard de PRODUÇÃO.png" alt="Dashboard de Produção" class="project-img">
             </div>
             <h2 class="experience-sub-title project-title">Dashboard de Produção</h2>
-            <p class="project-description">Dashboard desenvolvido em Power BI para monitoramento de performance industrial em tempo real. Consolida indicadores de eficiência, permitindo a análise de mais de 3 milhões de itens produzidos.</p>
+            <div class="project-description-container">
+                <p class="project-description">Monitoramento industrial em tempo real focado em eficiência e análise de 3M+ de itens produzidos.</p>
+            </div>
             <div class="btn-container">
-                <button class="btn btn-color2" onclick="window.open()">GitHub</button>
-                <button class="btn btn-color2" onclick="window.open('https://app.powerbi.com/groups/me/reports/787f5be2-a1c6-497a-87db-e233ec102bb0/ReportSectionc6a38bc8e7560af217bc?experience=power-bi', '_blank', 'noopener,noreferrer')">Live Demo</button>
+                <button class="btn btn-color2" onclick="window.open('URL_AQUI')">GitHub</button>
+                <button class="btn btn-color2" onclick="window.open('URL_AQUI')">Live Demo</button>
+            </div>
+        </div>
+
+        <div class="details-container color-container">
+            <div class="project-img-wrapper">
+                <span class="project-tag">Power BI</span>
+                <img src="assetes/Dashboard Logística.png" alt="Dashboard de Produção" class="project-img">
+            </div>
+            <h2 class="experience-sub-title project-title">Dashboard de Logística</h2>
+            <div class="project-description-container">
+                <p class="project-description">Dashboard desenvolvido no Power BI para análise de performance de transportes e gestão de entregas. Monitora o indicador OTD (On Time Delivery), identifica causas de desvios (extravios/avarias) e analisa a eficiência regional, utilizando DAX avançado para gerar insights estratégicos.s.</p>
+            </div>
+            <div class="btn-container">
+                <button class="btn btn-color2" onclick="window.open('URL_AQUI')">GitHub</button>
+                <button class="btn btn-color2" onclick="window.open('URL_AQUI')">Live Demo</button>
             </div>
         </div>
 
@@ -326,4 +359,4 @@
     </footer>
     <script src="script.js"></script>
 </body>
-</html>z
+</html>

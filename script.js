@@ -67,3 +67,78 @@ function typeEffect() {
 window.onload = () => {
     typeEffect();
 };
+
+// Efeito de revelação ao rolar a página
+const observerOptions = {
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.details-container').forEach(card => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(50px)";
+    card.style.transition = "all 0.6s ease-out";
+    observer.observe(card);
+});
+// Função para animar números nos cards de projeto
+function animateCounters() {
+    const counters = document.querySelectorAll('.project-description');
+    
+    counters.forEach(counter => {
+        // Busca apenas os números no texto (ex: 64, 3, 16)
+        const text = counter.innerText;
+        const numbers = text.match(/\d+/g);
+        
+        if (numbers) {
+            // Aqui você poderia implementar uma lógica de contagem real se quisesse,
+            // mas apenas o efeito de Fade-In suave já melhora a experiência.
+            counter.style.transition = "all 2s ease";
+        }
+    });
+}
+
+function filterProjects(category) {
+    const cards = document.querySelectorAll('.projects-grid-container .details-container');
+    
+    cards.forEach(card => {
+        const tag = card.querySelector('.project-tag').innerText;
+        if (category === 'all' || tag.includes(category)) {
+            card.style.display = "flex";
+            setTimeout(() => card.style.opacity = "1", 10);
+        } else {
+            card.style.opacity = "0";
+            setTimeout(() => card.style.display = "none", 300);
+        }
+    });
+}
+
+// Hover 3D effect nos projetos
+const cards = document.querySelectorAll(".color-container");
+
+cards.forEach(card => {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = (y - centerY) / 20;
+    const rotateY = (centerX - x) / 20;
+
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+  });
+});
