@@ -12,7 +12,7 @@
     --secundary-color-2: rgb(85, 85, 85);
     --button-background:rbg(53, 53, 53);
     --button-text-hover: grey;
-    --button-border: rgb(53, 53, 53) 0.1rem solid;
+    --button-border: rgb(53, 53, 53) 0.1rem solid; 
     --button-border-2: rgb(255, 255, 255) 0.1rem solid;
     --container-border: rgb(163, 163, 163);
 
@@ -197,10 +197,9 @@ nav:hover{
 
 section{
     padding-top: 4vh;
-    height: 96vh;
+    min-height: 96vh;
     margin: 0 auto;
     box-sizing: border-box;
-    min-height: fit-content;
     padding: 0 2rem;
 }
 
@@ -422,7 +421,7 @@ article .icon{
 
 .project-img{
     border-radius: 12px;
-    width: 210%;
+    width: 100%;
     height: 260px;
     object-fit: cover;
 }
@@ -514,7 +513,7 @@ footer p{
     object-fit: contain; /* Garante que o gráfico apareça inteiro sem cortes */
     background-color: #f0f0f0;
     margin-bottom: 1rem;
-}
+} 
 
 /* Badge de Tecnologia (Opcional: adicione no HTML dentro dos cards) */
 .tech-badge {
@@ -526,12 +525,32 @@ footer p{
     margin-right: 5px;
 }
 
-/* Container em Grid para manter 3 colunas perfeitas */
-.projects-grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
+/* CONTAINER DOS PROJETOS */
+.projects-grid-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* CARD DO PROJETO */
+.color-container{
+  background: white;
+  border: 1px solid rgb(200,200,200);
+  border-radius: 25px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+/* HOVER PROFISSIONAL */
+.color-container:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* Forçar todos os cards a terem a mesma altura */
@@ -552,9 +571,11 @@ footer p{
     background: #f0f0f0;
 }
 
-.project-img {
-    width: 100%;
-    height: 100%;
+/* IMAGEM */
+.project-img{
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
     object-fit: cover; /* Faz a imagem preencher o espaço sem sobrar fundo cinza */
 }
 
@@ -567,13 +588,10 @@ footer p{
     text-align: center;
 }
 
-.project-title {
-    font-size: 1.25rem;
-    margin: 0.5rem 0;
-    min-height: 3.5rem; /* Alinha títulos de 1 ou 2 linhas */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* TITULO */
+.project-title{
+  font-size: 1.4rem;
+  margin-bottom: 15px;
 }
 
 /* Container que organiza os cards */
@@ -631,13 +649,16 @@ footer p{
     z-index: 2;
 }
 
-.project-description {
-    height: 60px; /* Limita o tamanho do texto para não quebrar o alinhamento */
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    margin: 1rem 0;
+/* TEXTO */
+.project-description{
+  flex-grow: 1;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* BOTÕES */
+.project-btn{
+  margin-top: auto;
 }
 
 .project-img-wrapper {
@@ -648,12 +669,6 @@ footer p{
     overflow: hidden;
     margin-bottom: 1.5rem;
     background: #f0f0f0;
-}
-
-.project-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Corta a imagem perfeitamente sem distorcer */
 }
 
 .project-tag {
@@ -689,16 +704,6 @@ footer p{
     transform: translateY(0);
 }
 
-.project-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    min-height: 3rem; /* Alinha títulos de 1 ou 2 linhas */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .project-description {
     font-size: 0.85rem;
     color: var(--secundary-color-2);
@@ -723,4 +728,16 @@ footer p{
 .details-container.color-container:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 1200px){
+  .projects-grid-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px){
+  .projects-grid-container{
+    grid-template-columns: 1fr;
+  }
 }
